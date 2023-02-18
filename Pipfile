@@ -8,6 +8,10 @@ django = "*"
 wikipedia = "*"
 sumy = "*"
 bs4 = "*"
+torch = "*"
+transformers = "*"
+gensim = "==3.6.0"
+tokenizer = "*"
 
 [dev-packages]
 
