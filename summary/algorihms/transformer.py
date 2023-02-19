@@ -18,10 +18,9 @@ import torch
 from transformers import T5Tokenizer, T5Config, T5ForConditionalGeneration
 from .text_extractor import *
 
-def transformers_t5_base(base_url):
+def transformers_t5_base(text):
     tokenizer = AutoTokenizer.from_pretrained('t5-base')
     model = AutoModelWithLMHead.from_pretrained('t5-base', return_dict=True)
-    text = text_extractor(base_url)
     inputs = tokenizer.encode("summarize: " + text,
     return_tensors='pt',
     max_length=512,
@@ -30,10 +29,9 @@ def transformers_t5_base(base_url):
     summary = tokenizer.decode(summary_ids[0])
     return summary
 
-def transformers_t5_small(base_url):
+def transformers_t5_small(text):
     tokenizer1 = AutoTokenizer.from_pretrained('t5-small')
     my_model = T5ForConditionalGeneration.from_pretrained('t5-small')
-    text = text_extractor(base_url)
     input_ids = tokenizer1.encode(text, return_tensors='pt', max_length=700,truncation=True)
     summary_ids = my_model.generate(input_ids,max_length=1000, min_length=500, length_penalty=5., num_beams=2)
     t5_summary = tokenizer1.decode(summary_ids[0])

@@ -19,8 +19,7 @@ from transformers import pipeline
 
 from .text_extractor import *
 
-def bart(base_url):
-    text = text_extractor(base_url)
+def bart(text):
     tokenizer=BartTokenizer.from_pretrained('facebook/bart-large-cnn')
     model=BartForConditionalGeneration.from_pretrained('facebook/bart-large-cnn')
     summarizer = pipeline("summarization", model="facebook/bart-large-cnn")

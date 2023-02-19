@@ -1,7 +1,6 @@
 .url-holder{
     margin-left: 30px;
     margin-right: 30px;
-   
 }
 
 .center{
@@ -12,3 +11,13 @@
   margin-left: 40%;
 }
 
+.option-input{
+  display: flex;
+  flex-direction: row;
+  
+}
+
+.option-data{
+  margin-right: 30px;
+  margin-left: 10px;
+}

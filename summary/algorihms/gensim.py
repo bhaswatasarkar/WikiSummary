@@ -17,13 +17,11 @@ from nltk.tokenize import word_tokenize, sent_tokenize
 nltk.download('punkt')
 from .text_extractor import *
 
-def summary_by_ratio(base_url):
-    text = text_extractor(base_url)
+def summary_by_ratio(text):
     # Summary by 0.1% of the original content
     summary_ratio = summarize(text, ratio = 0.1) 
     return summary_ratio
 
-def summary_by_ratio(base_url):
-    text = text_extractor(base_url)
+def summary_by_wordcount(text):
     summary_wordcount = summarize(text, word_count = 1000)
     return summary_wordcount

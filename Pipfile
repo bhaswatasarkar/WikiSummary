@@ -12,6 +12,7 @@ torch = "*"
 transformers = "*"
 gensim = "==3.6.0"
 tokenizer = "*"
+validators = "*"
 
 [dev-packages]
 

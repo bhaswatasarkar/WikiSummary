@@ -18,24 +18,81 @@
                 <!-- <label for="basic-url" class="form-label">Your vanity URL</label> -->
                 <div class="input-group">
                     <span class="input-group-text" id="basic-addon3">Enter query </span>
-                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" name="url">
                 </div>
                 <div class="form-text">Copy the url of the corresponding wikipedia article and paste here or write the corresponding keyword to see the summary.</div>
             </div>
 
             <div class="radios">
+
                 <div class="option-input">
-                    <input class="radio" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                    <label class="" for="exampleRadios1">
-                    Default radio
-                    </label>
+                    <div>
+                        <input class="radio" type="radio" name="radio" id="radio-word-count" value="1">
+                        <label class="" for="">
+                            Summary with word count
+                        </label>
+                    </div>
+
+                    <div class="option-data" id="word-count-data">
+                        
+                    </div>
                 </div>
+
                 <div class="opton-input">
-                    <input class="radio" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                    <label class="" for="exampleRadios2">
-                    Second default radio
-                    </label>
+                    <div>
+                        <input class="radio" type="radio" name="radio" id="radio-ratio-value" value="2">
+                        <label class="" for="">
+                            Summary with ratio
+                        </label>
+                    </div>
+
+                    <div class="option-data" id="ratio-value-data">
+                        
+                    </div>
                 </div>
+
+
+                <div class="option-input">
+                    <div>
+                        <input class="radio" type="radio" name="radio" id="radio-sentence-count" value="3">
+                        <label class="" for="">
+                            Summary with sentence count
+                        </label>
+                    </div>
+
+                    <div class="option-data" id="sentence-count-data">
+                        
+                    </div>
+                </div>
+
+
+                <div class="option-input">
+                    <div>
+                        <input class="radio" type="radio" name="radio" id="" value="4">
+                        <label class="" for="">
+                            Abstract summary by T5 transformer
+                        </label>
+                    </div>
+                </div>
+
+                <div class="option-input">
+                    <div>
+                        <input class="radio" type="radio" name="radio" id="" value="5">
+                        <label class="" for="">
+                            abstract summary by GPT2
+                        </label>
+                    </div>
+                </div>
+
+                <div class="option-input">
+                    <div>
+                        <input class="radio" type="radio" name="radio" id="" value="6">
+                        <label class="" for="">
+                            abstract summary by Bart
+                        </label>
+                    </div>
+                </div>
+
             </div>
 
             <br>
@@ -48,7 +105,8 @@
            
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-        <script src="{% static 'js/home.js' %}"></script>
+        <script src="{% static 'home.js' %}"></script>
         <!-- <script src ="https://unpkg.com/axios/dist/axios.min.js"></script> -->
+
     </body>
 </html>
