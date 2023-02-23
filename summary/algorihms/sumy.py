@@ -17,7 +17,7 @@ from sumy.parsers.plaintext import PlaintextParser
 from sumy.nlp.tokenizers import Tokenizer
 
 from sumy.summarizers.lex_rank import LexRankSummarizer
-from .text_extractor import text_extractor
+
 def LSA_summarizer(text,sentenceCount):
     
     my_parser = PlaintextParser.from_string(text,Tokenizer('english'))

@@ -17,7 +17,6 @@ import torch
 from transformers import BartForConditionalGeneration, BartTokenizer, BartConfig
 from transformers import pipeline
 
-from .text_extractor import *
 
 def bart(text):
     tokenizer=BartTokenizer.from_pretrained('facebook/bart-large-cnn')

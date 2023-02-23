@@ -10,18 +10,18 @@ from bs4 import BeautifulSoup
 from sklearn.feature_extraction.text import CountVectorizer
 import pandas as pd
 import numpy as np
-import collections
+from collections.abc import Mapping
 import nltk.data
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize, sent_tokenize
 nltk.download('punkt')
-from .text_extractor import *
 
-def summary_by_ratio(text):
+
+def summary_by_ratio(text,ratioValue):
     # Summary by 0.1% of the original content
-    summary_ratio = summarize(text, ratio = 0.1) 
+    summary_ratio = summarize(text, ratio = ratioValue) 
     return summary_ratio
 
-def summary_by_wordcount(text):
-    summary_wordcount = summarize(text, word_count = 1000)
+def summary_by_wordcount(text,wordCount):
+    summary_wordcount = summarize(text, word_count = wordCount)
     return summary_wordcount

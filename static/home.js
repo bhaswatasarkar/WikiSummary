@@ -8,7 +8,7 @@ function wordCount(e){
     if (this.checked) {
         document.getElementById('word-count-data').innerHTML = `<div class="input-group input-group-sm mb-3">
         <span class="input-group-text" id="inputGroup-sizing-sm">Enter number of words</span>
-        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name="wordCount">
+        <input type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name="wordCount">
       </div>`;
     }
     else{
@@ -26,7 +26,7 @@ function ratioValue(e){
     if (this.checked) {
         document.getElementById('ratio-value-data').innerHTML = `<div class="input-group input-group-sm mb-3">
         <span class="input-group-text" id="inputGroup-sizing-sm">Enter ratio value(%)</span>
-        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name="ratioValue">
+        <input type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name="ratioValue">
       </div>`;
     }
     else{
@@ -43,7 +43,7 @@ function sentenceCount(e){
     if (this.checked) {
         document.getElementById('sentence-count-data').innerHTML = `<div class="input-group input-group-sm mb-3">
         <span class="input-group-text" id="inputGroup-sizing-sm">Enter number of sentences</span>
-        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name="sentenceCount">
+        <input type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name="sentenceCount">
       </div>`;
     }
     else{

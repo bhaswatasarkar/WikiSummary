@@ -16,7 +16,7 @@ from nltk.tokenize import word_tokenize, sent_tokenize
 nltk.download('punkt')
 import torch
 from transformers import T5Tokenizer, T5Config, T5ForConditionalGeneration
-from .text_extractor import *
+
 
 def transformers_t5_base(text):
     tokenizer = AutoTokenizer.from_pretrained('t5-base')

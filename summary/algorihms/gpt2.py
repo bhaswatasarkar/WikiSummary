@@ -14,7 +14,7 @@ from nltk.tokenize import word_tokenize, sent_tokenize
 nltk.download('punkt')
 
 from transformers import GPT2Tokenizer,GPT2LMHeadModel
-from .text_extractor import *
+
 
 def gpt2_summary(text):
     tokenizer=GPT2Tokenizer.from_pretrained('gpt2')
