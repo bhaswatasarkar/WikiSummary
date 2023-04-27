@@ -13,6 +13,15 @@ transformers = "*"
 gensim = "==3.6.0"
 tokenizer = "*"
 validators = "*"
+wordcloud = "*"
+sentencepiece = "*"
+protobuf = "==3.20.*"
+matplotlib-venn = "*"
+matplotlib-venn-wordcloud = "*"
+numpy = "<1.24"
+geneview = "*"
+gunicorn = "*"
+whitenoise = "*"
 
 [dev-packages]
 

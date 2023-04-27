@@ -14,7 +14,7 @@ from collections.abc import Mapping
 import nltk.data
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize, sent_tokenize
-nltk.download('punkt')
+# nltk.download('punkt')
 
 
 def summary_by_ratio(text,ratioValue):

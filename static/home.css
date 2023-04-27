@@ -8,17 +8,59 @@
 }
 
 .radios{
-  margin-left: 40%;
+  display: flex;
+  flex-direction: row;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.option-input-container{
+  flex:1;
+  border: 1px solid rgba(124, 189, 176, 0.725);
+  margin: 10px;
+  border-radius: 10px;
+  background-color: #F8F9FA;
 }
 
 .option-input{
   display: flex;
+  position: relative;
   flex-direction: row;
-  margin-bottom: 20px;
+  margin: 20px;
   
 }
 
 .option-data{
-  margin-right: 30px;
-  margin-left: 10px;
+  display:flex;
+  position:absolute;
+  margin-left: 50%;
+}
+
+.tab{
+  tab-size: 2;
+}
+
+.summary{
+  border:1px solid rgba(124, 189, 176, 0.725);
+  padding:20px;
+  border-radius: 10px;
+}
+
+.output{
+  margin: 30px;
+}
+
+.container{
+  margin-top: 30px;
+}
+
+.title{
+  margin: 20px;
+  padding: 15px;
+  font-size: larger;
+  font-weight: 600;
+}
+
+.form{
+  margin-top: 20px;
 }

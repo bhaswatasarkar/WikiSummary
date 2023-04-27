@@ -11,7 +11,7 @@ import collections
 import nltk.data
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize, sent_tokenize
-nltk.download('punkt')
+# nltk.download('punkt')
 
 from transformers import GPT2Tokenizer,GPT2LMHeadModel
 

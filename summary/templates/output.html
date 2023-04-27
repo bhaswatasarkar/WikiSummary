@@ -1,7 +1,21 @@
 {% include "home.html" %}
-<div class="center">
-    <img src="..." class="rounded mx-auto d-block" alt="...">
-</div>
-<div class="summary">
-    {{summary}}
+<div class="output">
+    <div class="summary">
+        
+        <div class="center">
+            <img src="{{image}}" width="200" height="auto" class="rounded mx-auto d-block" alt="...">
+            
+        </div>
+        
+        <div class="center title">
+            {{title}}
+        </div>
+        &nbsp &nbsp &nbsp &nbsp {{summary}}
+        <div class="center wordcloud">
+            <img src="data:image/png;base64, {{wordcloud|safe}}"  alt="...">
+        </div>
+        <div class="center wordcloud">
+            <img src="data:image/png;base64, {{wordcount|safe}}"  alt="...">
+        </div>
+    </div>
 </div>

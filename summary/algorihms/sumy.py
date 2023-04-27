@@ -11,7 +11,7 @@ import collections
 import nltk.data
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize, sent_tokenize
-nltk.download('punkt')
+# nltk.download('punkt')
 from sumy.summarizers.lsa import LsaSummarizer
 from sumy.parsers.plaintext import PlaintextParser
 from sumy.nlp.tokenizers import Tokenizer
@@ -52,3 +52,4 @@ def LEXRANK_summarizer(text,sentenceCount):
     for sentence in lexrank_summary:
         lex_summary+=" "+str(sentence)  
     return lex_summary
+    

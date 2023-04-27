@@ -12,7 +12,7 @@ from collections.abc import Mapping
 import nltk.data
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize, sent_tokenize
-nltk.download('punkt')
+# nltk.download('punkt')
 import torch
 from transformers import BartForConditionalGeneration, BartTokenizer, BartConfig
 from transformers import pipeline
