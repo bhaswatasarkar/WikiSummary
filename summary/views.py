@@ -38,7 +38,7 @@ def outputPage(request):
     title=""
     url=""
     
-    wordCount = 200
+    
     if isURL(base_url):
         text = text_extractor(base_url)
         title = title_extractor(base_url)

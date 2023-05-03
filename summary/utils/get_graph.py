@@ -24,6 +24,7 @@ from geneview import generate_petal_labels
 from geneview import venn
 
 def get_wordset(summary):
+    summary=summary.lower()
     stopwords = STOPWORDS
     filtered_words = [word for word in summary.split() if word not in stopwords]
     counted_words = Counter(filtered_words)
@@ -158,7 +159,6 @@ def get_venn_word_simple(text,dataset):
     venn.get_patch_by_id('11').set_alpha(0.4)
     venn.get_patch_by_id('01').set_color('yellow')
     venn.get_patch_by_id('01').set_alpha(0.4)
-
     graph = get_graph() 
     return graph
 
