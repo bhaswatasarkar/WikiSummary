@@ -44,7 +44,7 @@ def transformer_t5(text):
 
     model = AutoModelForSeq2SeqLM.from_pretrained("csebuetnlp/mT5_multilingual_XLSum")
 
-    tokens_input = tokenizer.encode(text, return_tensors='pt', max_length=512, truncation=True)
-    summary_ids = model.generate(tokens_input, min_length=80, max_length=120)
+    tokens_input = tokenizer.encode(text, return_tensors='pt', max_length=1024, truncation=True)
+    summary_ids = model.generate(tokens_input, min_length=80, max_length=1024)
     t5_summary = tokenizer.decode(summary_ids[0], skip_special_tokens=True)
     return t5_summary
