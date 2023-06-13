@@ -26,5 +26,5 @@ def filter_punctuations(summary):
     summary = [word for word in summary.split() if word.lower() not in sw_nltk]
     summary = " ".join(summary)
     summary = re.sub(r'(?:^| )\w(?:$| )', ' ', summary).strip()
-    summary = summary.replace("–","")
+    summary = summary.replace("-","")
     return summary

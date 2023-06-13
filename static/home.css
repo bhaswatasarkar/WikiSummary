@@ -64,3 +64,8 @@
 .form{
   margin-top: 20px;
 }
+
+.temp-flex{
+  display: flex;
+  flex-direction: row;
+}

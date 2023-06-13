@@ -22,6 +22,7 @@ from matplotlib_venn_wordcloud import venn2_wordcloud
 from matplotlib_venn_wordcloud import venn3_wordcloud
 from geneview import generate_petal_labels
 from geneview import venn
+import pandas as pd
 
 def get_wordset(summary):
     summary=summary.lower()
@@ -34,6 +35,20 @@ def get_wordset(summary):
         words.append(letter)
         counts.append(count)
     return words,counts
+
+# def get_wordset2_customized(summary):
+#     summary=summary.lower()
+#     stopwords = STOPWORDS
+#     filtered_words = [word for word in summary.split() if word not in stopwords]
+#     counted_words = Counter(filtered_words)
+#     words = []
+#     counts = []
+#     for letter, count in counted_words.most_common(28):
+#         words.append(letter)
+#         counts.append(count)
+#     print(words)
+#     words.remove('–')
+#     return words,counts
 
 def return_dataset(text):
     dataset = []

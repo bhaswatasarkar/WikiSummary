@@ -22,6 +22,7 @@ def clean_summary(text):
     text = [word for word in text.split() if word not in stoplist]
     text = " ".join(text)
     text = re.sub(r'(?:^| )\w(?:$| )', ' ', text).strip()
+    text.replace('-','')
     return text
 
 def clean_title(text):
