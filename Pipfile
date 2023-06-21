@@ -22,6 +22,7 @@ numpy = "<1.24"
 geneview = "*"
 gunicorn = "*"
 whitenoise = "*"
+numba = "*"
 
 [dev-packages]
 

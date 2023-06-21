@@ -55,9 +55,12 @@ def return_dataset(text):
     dataword = []
     words1 = get_wordset(clean_summary(LSA_summarizer(text,50)))[0]
     words2 = get_wordset(clean_summary(summary_by_wordcount(text,1000)))[0]
-    words3 = get_wordset(clean_summary(transformers_t5_small(text)))[0]
-    words4 = get_wordset(clean_summary(gpt2_summary(text)))[0]
-    words5 = get_wordset(clean_summary(bart(text)))[0]
+    # words3 = get_wordset(clean_summary(transformers_t5_small(text)))[0]
+    # words4 = get_wordset(clean_summary(gpt2_summary(text)))[0]
+    # words5 = get_wordset(clean_summary(bart(text)))[0]
+    words3={}
+    words4={}
+    words5={}
 
     words6 = get_wordset(clean_summary(summary_by_ratio(text,10)))[0]
 

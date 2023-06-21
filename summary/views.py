@@ -57,11 +57,14 @@ def outputPage(request):
     elif option==3:
         summary = LSA_summarizer(text,sentenceCount)
     elif option==4:
-        summary = transformer_t5(text)
+        # summary = transformer_t5(text)
+        return render(request,'budget_error.html')
     elif option==5:
-        summary = gpt2_summary(text)
+        # summary = gpt2_summary(text)
+        return render(request,'budget_error.html')
     elif option==6:
-        summary = bart(text)
+        # summary = bart(text)
+        return render(request,'budget_error.html')
     
     image = extract_image(url)
     summary = clean_summary_homepage(summary)
@@ -104,16 +107,16 @@ def getAnalysisPage(request):
 
     dataset = return_dataset(text)[0]
     dataword = return_dataset(text)[1]
-    venn1 = get_venn_word_abstract(text,dataset)
+    # venn1 = get_venn_word_abstract(text,dataset)
     venn2 = get_venn_word_simple(text,dataset)
-    venn3 = get_venn_count_abstract(text,dataset)
+    # venn3 = get_venn_count_abstract(text,dataset)
     venn4 = get_venn_count_simple(text,dataset)
-    venn5 = get_venn_fullcount(text,dataset)
-    wordcloud = get_wordcloud(dataset,dataword)
+    # venn5 = get_venn_fullcount(text,dataset)
+    # wordcloud = get_wordcloud(dataset,dataword)
 
-    context = {"venn1":venn1,"venn2":venn2,"venn3":venn3,"venn4":venn4,"venn5":venn5,"wordcloud":wordcloud}
+    context = {"venn2":venn2,"venn4":venn4}
 
-    print_keywords(dataset)
+    # print_keywords(dataset)
     return render(request,'analysis.html',context)
 
 
